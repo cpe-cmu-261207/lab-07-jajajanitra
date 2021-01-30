@@ -2,13 +2,38 @@ import {useEffect,useState} from 'react'
 import Link from 'next/link'
 import axios from 'axios'
 const baseURL = 'https://dummyapi.io/data/api'
-
+const password = '6015521ee7dfad6b195ef4d4'
 const Posts = () => {
     const [posts,setPosts] = useState([])
-
+    useEffect(() => {
+        axios.get(baseURL+"/post", { headers: { "app-id": password }}).then((respond)=>{
+            console.log(respond)
+            setPosts(respond.data.data)
+        })
+    },[] )
     return (
         <>
-            <h1>All Posts</h1>
+        <table style= {{width:" 100%",backgroundColor:"#ff9f80",borderStyle:"double",borderWidth: "10px",borderColor:"#fcf7e9"}}>
+        <tr align="center">
+            <td> <Link href={"/home"}><p style={{textAlign:"center"}}> Home </p></Link> </td>
+            <td> <Link href={"/gallery"}><p style={{textAlign:"center"}}> Gallery </p></Link> </td>
+            <td> <Link href={"/calgpa"}><p style={{textAlign:"center"}}> GPA Calculator </p></Link> </td>
+            <td> <Link href={"/contact"}><p style={{textAlign:"center"}}> Contact </p></Link> </td>
+            <td> <Link href={"/post"}><p style={{textAlign:"center"}}> Post </p></Link> </td>
+        </tr>
+    </table>
+            <h2>All Posts</h2>
+            {posts.map((item)=>{
+                return <div key={item.id}>
+                    <h4>{"Post : "+item.text}</h4>
+                    <p>
+                        <Link href={"/post/"+item.id}>
+                        <img className="imgflame" src={item.image} style={{width:"70%"}}></img>
+                        </Link>
+                        <p>{"Likes : "+item.likes}</p>  
+                    </p>
+                </div>
+            })}
         </>
     )
 }
