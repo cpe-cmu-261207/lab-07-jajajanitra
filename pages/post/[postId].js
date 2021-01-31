@@ -32,7 +32,7 @@ const Post = () => {
                     {"tags : "+post.tags}
                 </p>
                     <p>
-                        <img className="imgflame" src={post.image}></img>
+                        <p style={{textAlign:"center"}}><img className="imgflame" src={post.image}></img></p>
                         <p>{post.owner.firstName+" "+post.owner.lastName}</p>
                         <p>{"Likes : "+post.likes}</p>                       
                         {comment.map((item)=>{

@@ -26,11 +26,11 @@ const Posts = () => {
             {posts.map((item)=>{
                 return <div key={item.id}>
                     <h4>{"Post : "+item.text}</h4>
-                    <p>
+                    <p style={{textAlign:"center"}}>
                         <Link href={"/post/"+item.id}>
                         <img className="imgflame" src={item.image} style={{width:"70%"}}></img>
                         </Link>
-                        <p>{"Likes : "+item.likes}</p>  
+                        <p style={{color:"#ff9f80"}}>{"Likes : "+item.likes}</p>  
                     </p>
                 </div>
             })}
