@@ -22,11 +22,11 @@ const Gallery=()=>{
             </table>
 
             <h2>Gallery</h2>
-            <table style={{width:"100%",borderCollapse: "collapse",borderStyle: "double",borderWidth: "10px",borderColor:"#ff9f80",backgroundColor:"#fcf7e9"}} >
+            <table style={{width:"100%",textAlign:"center",borderStyle: "double",borderWidth: "10px",borderColor:"#ff9f80",backgroundColor:"#fcf7e9"}} >
                 <tr>
-                    <td><img src="dogs1.jpg"></img></td>
-                    <td><img src="dogs.jpg"></img></td>
-                    <td><img src="dogs2.jpg"></img></td>
+                    <td><img src="dogs1.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
+                    <td><img src="dogs.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
+                    <td><img src="dogs2.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
                 </tr>
                 <tr>
                     <td>Pembroke Welsh Corgi</td>
@@ -34,9 +34,9 @@ const Gallery=()=>{
                     <td>French Bulldog</td>
                 </tr>
                 <tr>
-                    <td><img src="sea.jpg"></img></td>
-                    <td><img src="plant.jpg"></img></td>
-                    <td><img src="tulip.jpg"></img></td>
+                    <td><img src="sea.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
+                    <td><img src="plant.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
+                    <td><img src="tulip.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
                 </tr>
                 <tr>
                     <td>Blue sea</td>
@@ -44,9 +44,9 @@ const Gallery=()=>{
                     <td>Orange tulip</td>
                 </tr>
                 <tr>
-                    <td><img src="cats3.jpg"></img></td>
-                    <td><img src="cats1.jpg"></img></td>
-                    <td><img src="cats2.jpg"></img></td>
+                    <td><img src="cats3.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
+                    <td><img src="cats1.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
+                    <td><img src="cats2.jpg" style={{heigth:"300px",width:"300px"}}></img></td>
                 </tr>
                 <tr>
                     <td>Persian</td>
